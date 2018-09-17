@@ -1,0 +1,13 @@
+/node_modules
+package-lock.json
+
+# Maven
+log/
+target/
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Intellij
+.idea/
+*.iml
+*.iws
