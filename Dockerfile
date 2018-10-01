@@ -12,12 +12,12 @@ RUN /usr/sbin/groupadd -r app
 RUN useradd -g app -u 999 app
 
 # Chown all files to the user
-RUN chown -R app:app /tmp
+RUN chown -R app:app springbootreact-0.0.1-SNAPSHOT.jar
 
 USER 999
 
-CMD java - jar springbootreact-0.0.1-SNAPSHOT.jar
-#ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/tmp/springbootreact-0.0.1-SNAPSHOT.jar.jar"]
+#CMD java - jar springbootreact-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom -Dfile.encoding=windows-1252","-jar","/springbootreact-0.0.1-SNAPSHOT.jar"]
 
 # Create app directory
 #WORKDIR /d/work/springboot

@@ -1,5 +1,9 @@
-version: '3.7'
-services:
-  web:
-    image: springbootreact:latest
-    init: true
+apiVersion: 3
+kind: Deployment
+  metadata:
+    name: sphelan-test
+spec:
+    spec:
+      containers:
+      - name: springbootreact-container
+        image: sarahp/springbootreact
