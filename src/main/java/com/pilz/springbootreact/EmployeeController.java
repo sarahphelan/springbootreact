@@ -1,7 +1,6 @@
 package com.pilz.springbootreact;
 
 
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +14,7 @@ public class EmployeeController {
     private EmployeeRepository employeeRepository;
 
     @RequestMapping(value = "employees", method = RequestMethod.GET)
+
     public List<Employee> list() {
         return EmployeeStub.list();
         //return employeeRepository.findAll();

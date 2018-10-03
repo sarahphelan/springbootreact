@@ -1,9 +1,9 @@
-apiVersion: 3
-kind: Deployment
-  metadata:
-    name: sphelan-test
-spec:
-    spec:
-      containers:
-      - name: springbootreact-container
-        image: sarahp/springbootreact
+version: '3'
+services:
+  web:
+    image: sarahp/springbootreact
+    deploy:
+      replicas: 1
+    build: .
+    ports:
+    - "80:8080"
