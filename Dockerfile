@@ -6,6 +6,7 @@ WORKDIR /
 ADD target/springbootreact-0.0.1-SNAPSHOT.jar springbootreact-0.0.1-SNAPSHOT.jar
 
 EXPOSE 8080
+EXPOSE 5432
 
 # Create an app user so the program doesn't run as root.
 RUN /usr/sbin/groupadd -r app
